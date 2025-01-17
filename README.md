@@ -1,2 +1,1 @@
-# News-API-Flask-ALX
-News website using api
+# News Website using flask

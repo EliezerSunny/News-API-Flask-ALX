@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Eliazer || MaxNews</title>
+
+        <!-- MaxBeatX icon -->
+        <link rel="icon" href="{{ url_for('static', filename='img/MaxBeatx.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/1aef77d8a7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <meta name="og:description" content="MaxNews is the best website with the best news around the world." />
+    <meta name="keywords" content="Latest World MaxNews,">
+        <meta name="author" content="Eliazer Adetunji" />
+        <meta name="TitleImage" content="img/MaxBeatx4.jpg" />
+
+        <meta property="og:local" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Mews Update - MaxNews" />
+        <meta property="article:publisher" content="https://m.facebook.com/maxbeatx/" />
+        <meta property="og:image" content="https://github.com/EliezerSunny/Maxbeatx_website/blob/main/public/storage/img/MAX-NEWS.png" />
+        <meta property="og:url" content="{{ url_for('index') }}" />
+        <meta property="og:site_name" content="MaxNews" />
+
+        <!--- IMG LOADER --->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+                $(window).load(function() {
+                        $(".loader").fadeOut("slow");
+                });
+        </script>
+        <!--- IMG LOADER END --->
+</head>
+
+<body id="main">
+
+        <div class="loader">
+                <img src="{{ url_for('static', filename='img/maxnews.png') }}" alt="Loading...">
+        </div>
+
+                <head class="head">
+
+                        <div class="header">
+
+                        <div class="img-logo">
+                                <a href="{{ url_for('index') }}">
+                           
+			   <p id="logo"></p>
+                          <img src="{{ url_for('static', filename='img/maxnews.png') }}" alt="MaxNews"> 
+
+			   </a>
+                        </div>
+
+                        <div class="head-content-link1">
+                                <ul class="head-link1">
+                                        <li><a href="{{ url_for('index') }}" style="color: #b1060f;">Home</a></li>
+
+                                        <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+                                        <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+
+                                        <li><div class="searchBody">
+                        <form class="search" method="GET" action="{{ url_for('search') }}">
+                                <input type="search" placeholder="Search..." name="q">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div></li>
+                                </ul>
+                        </div>
+
+
+                        <div class="head-content-link" id="mySidenav">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                                <ul class="head-link">
+                                        <li><a href="{{ url_for('index') }}" style="color: #b1060f;">Home</a></li>                                                                                                                                  <li><a href="{{ url_for('about_us') }}">About Us</a></li>                                           <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li
+>
+
+                                        <li><div class="searchBody">
+                        <form class="search" method="GET" action="{{ url_for('search') }}">
+                                <input type="search" placeholder="Search..." name="q">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div></li>
+                                </ul>
+                        </div>
+
+
+                        <div class="nav-menu" onclick="openNav()">
+                        <i class="fa fa-bars"></i>
+                </div>
+
+
+
+                </div>
+
+
+                </head>
+
+
+		
+
+		<!--- Main-Content --->
+
+		<div class="all-content">
+
+
+			<div class="follow">
+		    	<h5>Follow us on:</h5>
+			    <div class="follow-us">
+			    	<button onclick="location.href='https://mobile.twitter.com/MaxBeatx'"><i class="fa fa-twitter" style="color: #00acee;"></i></button>
+		    	    
+		    	    
+		    		<button onclick="location.href='https://www.facebook.com/profile.php?id=100082801342436'"><i class="fa fa-facebook" style="color: #3b5998;"></i></button>
+		    		
+		    		
+		    		<button onclick="location.href='https://wa.me/message/MKPTCBT2VUW6JI'"><i class="fa fa-whatsapp" style="color: #075e54;"></i></button>
+		    		
+		    		
+		    		<button onclick="location.href='https://t.me/MaxBeatx"> <i class="fa fa-telegram" style="color: #0088cc;"></i></button>
+			    </div>
+
+			</div>
+
+
+
+
+			<!--- ABOUT US --->
+			<div class="maxbeatx-articles">
+
+				<div class="post-head">
+				<div class="naija"></div>
+				<h4>About Eliazer</h4>
+			    </div>
+
+
+			    <div class="eliazer-profile">
+			    	
+				    <img src="{{ url_for('static', filename='img/eliazer-profile2.jpg') }}" alt="Eliazer">
+			        
+
+			<p><span>Name:</span> Eliazer</p>
+
+			<p><span>Gender:</span> Male</p>
+
+			<p><span>Position:</span> <b>MaxNews CEO</b> </p>
+
+			<p><span>Birthday:</span> 9 September, <span id="birth"></span>.</p>
+		    
+
+			<p><span>Location:</span> Oyo State. Nigeria</p>
+
+			<p><span>Last seen:</span> <i class="fa fa-calendar"></i> <date id="date"></date></p>
+
+		    </div>
+
+
+		    <p><a href="#">MaxNews</a> was created by <b>Eliazer</b>.</p>
+
+
+
+		    </div>
+
+        
+
+			<!--- ABOUT US END --->
+
+
+
+
+
+
+
+
+
+
+
+	<!--- POST --->
+
+
+
+                        <div class="headline">
+
+                                <div class="post-head">
+                                <div class="naija"></div>
+                                <h4> LATEST NEWS UPDATE</h4>
+                            </div>
+
+
+
+                            <!--- MAIN POST --->
+
+                            {% if news_list %}
+                    {% for article in news_list %}
+
+                                <div class="post">
+
+                                        <a href="{{ url_for('news_details', news_id=loop.index0, category=category) }}">
+
+                                        <div class="music">
+
+
+{% if article.image %}
+                                <img src="{{ article.image }}" alt="{{ article.title }}">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='img/MAX-NEWS.png') }}" alt="MaxNews">
+                            {% endif %}
+
+                                                <div class="text">
+
+
+                                                 <div class="p">
+                                                 <p>{{ article.title }}</p>
+
+      </div>
+
+      <span>{{ article.description }}</span>
+
+                                                </div>
+
+                                        </div>
+                                        </a>
+                                </div>
+
+
+               {% endfor %}
+
+                {% else %}
+
+
+
+                    <!-- MANI POST ELSE -->
+
+                    <div class="post">
+                                        <a href="#">                                                                                        <div class
+="music">
+
+                                <img src="{{ url_for('static', filename='img/maxbeatx44.png') }}" alt="MaxNews">
+
+
+                                                <d
+iv class="text">
+
+
+        <span>News Update</span>
+
+      <div class="p">
+                                                        <p>No news update for this category!!!</p>
+
+      </div>                                                                                        
+                                                                                                  </div>                                                                                                                                        </div>                                            </a>                                      </div>
+
+
+                                                 <!-- MAIN POST ELSE END -->
+
+                {% endif %}
+
+
+
+
+
+
+                                <!--- MAIN POST END --->
+
+
+                                <div class="more-button">
+
+                                        <button onclick="location.href='#'">NEXT PAGE</button>
+
+                                </div>
+
+
+
+                        </div>
+
+                        
+
+                        <!--- POST-END --->	
+
+			
+
+
+
+	    </div>
+
+	    <!--- Main-Content-End -->
+
+
+
+
+
+
+<footer class="footer">
+                <div class="main-footer">
+
+                        <div class="img-footer-logo">
+                                <a href="{{ url_for('index') }}">
+                          
+			  <p id="logo2"></p>
+                         <img src="{{ url_for('static', filename='img/maxnews.png') }}" alt="MaxNews"> 
+
+			  </a>
+                        </div>
+
+                        <div class="footer-link">
+
+                                <div class="footer-links">
+                                        <h5>Menu</h5>
+
+                                        <hr>
+
+                                        <ul class="foot-link">
+                                                <li><a href="{{ url_for('index') }}">Home</a></li>
+
+                                            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+                                            <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+
+                                        </ul>
+
+                                </div>
+
+                                <div class="footer-links">
+                                        <h5>About</h5>
+
+                                        <hr>
+
+                                        <ul class="foot-link">
+                                                <p>
+                                                 MaxNews is the best website with the best news around the world.
+                                                </p>
+                                        </ul>
+
+                                </div>
+
+                                <div class="footer-links">
+                                        <h5>Contact</h5>
+
+                                        <hr>
+
+                                        <ul class="foot-link">
+                                                <li><a href="{{ url_for('index') }}"><i class="fa fa-home"></i> MaxNews</a></li>
+                                        <li><a href="tel:+234(0)8149028042"><i class="fa fa-phone"></i> +234 (0) 8149028042</a></li>
+                                        <li><i class="fa fa-location"></i> MaxNews, Oyo State. Nigeria</li>
+                                        </ul>
+
+                                </div>
+
+
+                        </div>
+
+                        <div class="footer-bottom">
+                                <hr>
+                                <p>&copy; <span id="year"></span> MaxNews. All right reserved.</p>
+                        </div>
+
+                        </div>
+
+                </div>
+        </footer>
+
+        <script src="{{ url_for('static', filename='script/main.js') }}"></script>
+        <script src="{{ url_for('static', filename='script/date.js') }}"></script>
+
+
+</body>
+</html>

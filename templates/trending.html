@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending News</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Trending News</h1>
+        <div class="news-list">
+            {% if news_list %}
+                {% for article in news_list %}
+                    <div class="news-item">
+                        {% if article.image %}
+                            <img src="{{ article.image }}" alt="News Image">
+                        {% else %}
+                            <img src="https://via.placeholder.com/120x80?text=No+Image" alt="No Image Available">
+                        {% endif %}
+                        <div>
+                            <h3>{{ article.title }}</h3>
+                            <p>{{ article.description }}</p>
+                            <a href="{{ article.url }}" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No trending news available.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - All Categories</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+
+    <!-- Navigation Links -->
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('trending') }}">Trending</a></li>
+            </ul>
+        </nav>
+
+
+        <h1>All News Categories</h1>
+        {% for category, news_list in news_data.items() %}
+            <div class="category-section">
+                <h2>{{ category.capitalize() }}</h2>
+                {% if news_list %}
+                    {% for article in news_list %}
+                        <div class="news-item">
+                            {% if article.image %}
+                                <img src="{{ article.image }}" alt="News Image">
+                            {% else %}
+                                <img src="https://via.placeholder.com/120x80?text=No+Image" alt="No Image Available">
+                            {% endif %}
+                            <div>
+                                <h3>{{ article.title }}</h3>
+                                <p>{{ article.description }}</p>
+                                <a href="{{ article.url }}" target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No news available for this category.</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Link to External JavaScript -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About-Us || MaxBeatx</title>
+
+	<!-- MaxBeatX icon -->
+  <link rel="icon" href="img/MaxBeatx.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/1aef77d8a7.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <meta name="og:description" content="Download All the Latest Music mp3, Videos" />
+    <meta name="keywords" content="Latest World Max Musics and Videos,">
+	<meta name="author" content="Eliazer Adetunji" />
+	<meta name="TitleImage" content="img/MaxBeatx4.jpg" />
+
+	<meta property="og:local" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Music is life - MaxBeatx" />
+	<meta property="article:publisher" content="https://m.facebook.com/maxbeatx/" />
+	<meta property="og:image" content="img/MaxBeatx4.jpg" />
+	<meta property="og:url" content="https://www.maxbeatx.com" />
+	<meta property="og:site_name" content="MaxBeatx" />
+
+	<!--- IMG LOADER --->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script>
+		$(window).load(function() {
+			$(".loader").fadeOut("slow");
+		});
+	</script>
+	<!--- IMG LOADER END --->
+</head>
+<body id="main">
+
+	<div class="loader">
+		<img src="img/loader2.gif" alt="Loading...">
+	</div>
+	
+		<head class="head">
+
+			<div class="header">
+
+			<div class="img-logo">
+				<a href="https://www.maxbeatx.com">
+			
+
+				<p id="logo"></p>
+			   <img src="{{ url_for('static', filename='img/maxnews.png') }}" alt="MaxNews">
+
+				</a>
+			</div>
+
+			<div class="head-content-link1">
+				<ul class="head-link1">
+					<li><a href="https://www.maxbeatx.com">Home</a></li>
+					<li><a href="https://www.maxbeatx.com">Musics</a></li>
+					<li><a href="news">News</a></li>
+					<li><a href="about-us" style="color: #b1060f;">About Us</a></li>
+					<li><a href="contact-us">Contact Us</a></li>
+					<li><a href="promote-music">Promote Music</a></li>
+					<li><div class="searchBody">
+			<form class="search" method="GET" action="https://www.maxbeatx.com/search.html">
+				<input type="search" placeholder="Search..." name="q">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		    </div></li>
+				</ul>
+			</div>
+			
+
+			<div class="head-content-link" id="mySidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+				<ul class="head-link">
+					<li><a href="https://www.maxbeatx.com">Home</a></li>
+					<li><a href="https://www.maxbeatx.com">Musics</a></li>
+					<li><a href="news">News</a></li>
+					<li><a href="about-us" style="color: #c96166;">About Us</a></li>
+					<li><a href="contact-us">Contact Us</a></li>
+					<li><a href="promote-music">Promote Music</a></li>
+					<li><div class="searchBody">
+			<form class="search" method="GET" action="https://www.maxbeatx.com/search.html">
+				<input type="search" placeholder="Search..." name="q">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		    </div></li>
+				</ul>
+			</div>
+
+
+			<div class="nav-menu" onclick="openNav()">
+			<i class="fa fa-bars"></i>
+		</div>
+		
+
+
+		</div>
+
+
+		</head>
+
+
+		
+
+		<!--- Main-Content --->
+
+		<div class="all-content">
+
+
+<div class="follow">
+		    	<h5>Follow us on:</h5>
+			    <div class="follow-us">
+			    	<button onclick="location.href='https://mobile.twitter.com/MaxBeatx'"><i class="fa fa-twitter" style="color: #00acee;"></i></button>
+		    	    
+		    	    
+		    		<button onclick="location.href='https://www.facebook.com/profile.php?id=100082801342436'"><i class="fa fa-facebook" style="color: #3b5998;"></i></button>
+		    		
+		    		
+		    		<button onclick="location.href='https://wa.me/message/MKPTCBT2VUW6JI'"><i class="fa fa-whatsapp" style="color: #075e54;"></i></button>
+		    		
+		    		
+		    		<button onclick="location.href='https://t.me/MaxBeatx"> <i class="fa fa-telegram" style="color: #0088cc;"></i></button>
+			    </div>
+
+			</div>
+
+
+
+			<!--- ABOUT US --->
+			<div class="maxbeatx-articles">
+
+				<div class="post-head">
+				<div class="naija"></div>
+				<h4>About MaxBeatx</h4>
+			    </div>
+
+			    <div class="top-img">
+			    <img src="img/MaxBeatx4.jpg" alt="MaxBeatx">
+		        </div>
+
+			<p>MaxBeatx.com is an online music website that provides sufficient Music Mp3 and Mp4, News update. MaxBeatx is avaliable to give you quality service, by providing a lot of music from your favorite artists for streaming and downloading.</p>
+
+			<p>The website has been functioning since January 2023 till now, loved by music users, creating and delivering quality content. The blog was created by <a href="profile/eliazer">Eliazer Adetunji</a></p>
+
+			<p>You can download and stream any music you choose on MaxBeatx, just use the search button and you will be happy for that.</p>
+
+			<p>The website is built using HTML, CSS JavaScript, PHP, MySQL, and AJAX </p>
+
+			<p>We are glad to have you here MaxBeatx.com, keep visiting and enjoy your favorite music.</p>
+
+
+
+		    </div>
+
+        
+
+			<!--- ABOUT US END --->
+
+
+			<!--- NIGERIA MUSIC --->
+
+        <!--- POST --->
+			<div class="headline">
+
+				<div class="post-head">
+				<div class="naija"></div>
+				<h4>NIGERIA MUSIC...</h4>
+			    </div>
+
+			    <!--- MAIN POST --->
+				<div class="post">
+					<a href="https://www.maxbeatx.com/nigeria-music/young-jonn-xtra-cool">
+					<div class="music">
+
+						<img src="img/Young-Jonn-Xtra-Cool.jpg" alt="Young Jonn - Xtra-Cool">
+
+						<div class="text">
+							<span>Nigeria Music</span>
+
+							<div class="p">
+							<p>Young Jonn - Xtra-Cool</p>
+							
+						   </div>
+
+						</div>
+
+					</div>
+				    </a>
+				</div>
+
+
+               
+				<div class="post">
+					<a href="https://www.maxbeatx.com/nigeria-music/ayra-starr-rush">
+					<div class="music">
+
+						<img src="img/Ayra-Starr-Rush.jpg" alt="Ayra Starr - Rush">
+
+						<div class="text">
+							<span>Nigeria Music</span>
+
+							<div class="p">
+							<p>Ayra Starr - Rush</p>
+						   </div>
+						   
+						</div>
+
+					</div>
+				    </a>
+				</div>
+
+
+
+				<div class="post">
+					<div class="music">
+
+						<img src="img/MaxBeatx-actwork.jpg" alt="MaxBeatx">					    
+
+						<div class="text">
+							<span>Nigeria Music</span>
+
+							<div class="p">
+							<p>Omah Lay - Take It On</p>
+							<p>(Official Sprite Limelight)</p>
+							<p>Music...</p>
+						   </div>
+						   
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<div class="post">
+					<a href="https://www.maxbeatx.com/nigeria-music/pheelz-electricity-ft-davido">
+					<div class="music">
+
+						<img src="img/pheelz-electricity-ft-davido.jpg" alt="Pheelz - Electricity ft. Davido">					    
+
+						<div class="text">
+							<span>Nigeria Music</span>
+
+							<div class="p">
+							
+							<p>Pheelz - Electricity ft</p>
+							<p>Davido</p>
+						    
+						   </div>
+						   
+						</div>
+
+					</div>
+					</a>
+				</div>
+
+
+
+				<div class="post">
+					<div class="music">
+
+						<img src="img/MaxBeatx-actwork.jpg" alt="MaxBeatx">					    
+
+						<div class="text">
+							<span>Nigeria Music</span>
+
+							<div class="p">
+							<p>Omah Lay - Bend You</p>
+						   </div>
+						   
+						</div>
+
+					</div>
+				</div>
+
+				<!--- MAIN POST END --->
+
+
+				<div class="more-button">
+					
+					<button onclick="location.href='https://www.maxbeatx.com/nigeria-music/page-1'">VIEW MORE</button>
+				    
+				</div>
+
+
+
+			</div>
+
+			<!--- POST-END --->
+
+			<!--- NIGERIA MUSIC END --->
+
+			
+
+
+
+		<!--- FOREIGN MUSIC --->
+
+        <!--- POST --->
+			<div class="headline">
+
+				<div class="post-head">
+				<div class="naija"></div>
+				<h4>FOREIGN MUSIC...</h4>
+			    </div>
+
+			    <!--- MAIN POST --->
+				<div class="post">
+					<a href="https://www.maxbeatx.com/foreign-music/arrdee-hello-mate-ft-kyla">
+					<div class="music">
+
+						<img src="img/ArrDee-Hello-Mate-ft-Kyla-1.jpg" alt="Arrdee - Hello Mate ft. Kyla">
+
+						<div class="text">
+							<span>Foreign Music</span>
+
+							<div class="p">
+							
+							<p>Arrdee - Hello Mate ft.</p>
+							<p>Kyla</p>
+						    
+						   </div>
+
+						</div>
+
+					</div>
+					</a>
+				</div>
+
+
+
+				
+				<div class="post">
+					<a href="https://www.maxbeatx.com/foreign-music/beyonce-halo">
+					<div class="music">
+
+						<img src="img/Beyonce-Halo.png" alt="Beyonce - Halo">
+
+						<div class="text">
+							<span>Foreign Music</span>
+
+							<div class="p">
+							<p>Beyonce - Halo</p>
+						   </div>
+						   
+						</div>
+
+					</div>
+				    </a>
+				</div>
+
+
+
+				<div class="post">
+					<a href="https://www.maxbeatx.com/foreign-music/lewis-capaldi-someone-you-loved">
+					<div class="music">
+
+						<img src="img/lewis-capaldi-someone-you-loved.jpg" alt="Lewis Capaldi - Someone You Loved">					    
+
+						<div class="text">
+							<span>Foreign Music</span>
+
+							<div class="p">
+							<p>Lewis Capaldi - Someone You Loved</p>
+							
+						   </div>
+						   
+						</div>
+
+					</div>
+				    </a>
+				</div>
+
+
+
+				<div class="post">
+					<a href="https://www.maxbeatx.com/foreign-music/john-legend-all-of-me">
+					<div class="music">
+
+						<img src="img/John-Legend_All-Of-Me.png" alt="John Legend - All Of Me">					    
+
+						<div class="text">
+							<span>Foreign Music</span>
+
+							<div class="p">
+							<p>John Legend - All Of Me</p>
+						   </div>
+						   
+						</div>
+
+					</div>
+					</a>
+				</div>
+
+
+
+				<div class="post">
+					<div class="music">
+
+						<img src="img/MaxBeatx-actwork.jpg" alt="MaxBeatx">					    
+
+						<div class="text">
+							<span>Foreign Music</span>
+
+							<div class="p">
+							<p>Maroons 5 - Girls Like You ft.</p>
+							<p>Cardi B</p>
+						   </div>
+						   
+						</div>
+
+					</div>
+				</div>
+
+				<!--- MAIN POST END --->
+
+
+				<div class="more-button">
+					
+					<button onclick="location.href='https://www.maxbeatx.com/foreign-music/page-1'">VIEW MORE</button>
+				    
+				</div>
+
+
+
+			</div>
+
+			<!--- POST-END --->
+
+			<!--- FOREIGN MUSIC END --->
+
+
+
+	    </div>
+
+	    <!--- Main-Content-End --->
+
+
+	<footer class="footer">
+		<div class="main-footer">
+
+			<div class="img-footer-logo">
+				<a href="https://www.maxbeatx.com">
+			
+					<p id="logo2"></p>
+			   <img src="{{ url_for('static', filename='img/maxnews.png') }}" alt="MaxNews">
+
+				</a>
+			</div>
+
+			<div class="footer-link">
+				
+				<div class="footer-links">
+					<h5>Menu</h5>
+
+					<hr>
+
+					<ul class="foot-link"> 
+						<li><a href="https://www.maxbeatx.com">Home</a></li>
+					    <li><a href="https://www.maxbeatx.com">Musics</a></li>
+					    <li><a href="news">News</a></li>
+					    <li><a href="about-us">About Us</a></li>
+					    <li><a href="contact-us">Contact Us</a></li>
+					    <li><a href="promote-music">Promote Music</a></li>
+					</ul>
+
+				</div>
+
+				<div class="footer-links">
+					<h5>About</h5>
+
+					<hr>
+
+					<ul class="foot-link"> 
+						<p>
+							MaxBeatx is the best website with the best hit music from Nigeria and around the world.
+						</p>
+					</ul>
+
+				</div>
+
+				<div class="footer-links">
+					<h5>Contact</h5>
+
+					<hr>
+
+					<ul class="foot-link"> 
+						<li><a href="https://www.maxbeatx.com"><i class="fa fa-home"></i> https://www.maxbeatx.com</a></li>
+					<li><a href="tel:+234(0)8149028042"><i class="fa fa-phone"></i> +234 (0) 8149028042</a></li>
+					<li><i class="fa fa-location"></i> MaxBeatx, Oyo State. Nigeria</li>
+					</ul>
+
+				</div>
+
+
+			</div>
+
+			<div class="footer-bottom">
+				<hr>
+				<p>&copy; <span id="year"></span> MaxBeatx. All right reserved.</p>
+			</div>
+				
+			</div>
+
+		</div>
+	</footer>
+
+	<script src="script/main.js"></script>
+	<script src="script/date.js"></script>
+</body>
+</html>
