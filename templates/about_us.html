@@ -3,26 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>About-Us || MaxBeatx</title>
+	<title>About-Us || MaxNews</title>
 
 	<!-- MaxBeatX icon -->
-  <link rel="icon" href="img/MaxBeatx.ico" type="image/x-icon">
+	<link rel="icon" href="{{ url_for('static', filename='img/MaxBeatx.ico') }}" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/1aef77d8a7.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <meta name="og:description" content="Download All the Latest Music mp3, Videos" />
-    <meta name="keywords" content="Latest World Max Musics and Videos,">
+    <meta name="og:description" content="MaxNews is the best website with the best news around the world." />
+    <meta name="keywords" content="Latest World MaxNews,">
 	<meta name="author" content="Eliazer Adetunji" />
 	<meta name="TitleImage" content="img/MaxBeatx4.jpg" />
 
 	<meta property="og:local" content="en_US" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Music is life - MaxBeatx" />
+	<meta property="og:title" content="News Update - MaxNews" />
 	<meta property="article:publisher" content="https://m.facebook.com/maxbeatx/" />
-	<meta property="og:image" content="img/MaxBeatx4.jpg" />
-	<meta property="og:url" content="https://www.maxbeatx.com" />
-	<meta property="og:site_name" content="MaxBeatx" />
+	<meta property="og:image" content="https://github.com/EliezerSunny/Maxbeatx_website/blob/main/public/storage/img/MAX-NEWS.png" />
+	<meta property="og:url" content="{{ url_for('index') }}" />
+	<meta property="og:site_name" content="MaxNews" />
 
 	<!--- IMG LOADER --->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -39,30 +39,30 @@
 		<img src="img/loader2.gif" alt="Loading...">
 	</div>
 	
-		<head class="head">
+		
+    <head class="head">
 
 			<div class="header">
 
 			<div class="img-logo">
-				<a href="https://www.maxbeatx.com">
-			
+				<a href="{{ url_for('index') }}">
+		
 
-				<p id="logo"></p>
-			   <img src="{{ url_for('static', filename='img/maxnews.png') }}" alt="MaxNews">
+				<div id="logo"></div> <img src="{{ url_for('static', filename='img/maxnews.png') }}" alt="MaxNews">
 
-				</a>
+
+			    </a>
 			</div>
 
 			<div class="head-content-link1">
 				<ul class="head-link1">
-					<li><a href="https://www.maxbeatx.com">Home</a></li>
-					<li><a href="https://www.maxbeatx.com">Musics</a></li>
-					<li><a href="news">News</a></li>
-					<li><a href="about-us" style="color: #b1060f;">About Us</a></li>
-					<li><a href="contact-us">Contact Us</a></li>
-					<li><a href="promote-music">Promote Music</a></li>
+					<li><a href="{{ url_for('index') }}" style="color: #b1060f;">Home</a></li>
+				
+					<li><a href="{{ url_for('about_us') }}">About Us</a></li>
+					<li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+				
 					<li><div class="searchBody">
-			<form class="search" method="GET" action="https://www.maxbeatx.com/search.html">
+			<form class="search" method="GET" action="{{ url_for('search') }}">
 				<input type="search" placeholder="Search..." name="q">
 				<button type="submit"><i class="fa fa-search"></i></button>
 			</form>
@@ -75,14 +75,11 @@
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
 				<ul class="head-link">
-					<li><a href="https://www.maxbeatx.com">Home</a></li>
-					<li><a href="https://www.maxbeatx.com">Musics</a></li>
-					<li><a href="news">News</a></li>
-					<li><a href="about-us" style="color: #c96166;">About Us</a></li>
-					<li><a href="contact-us">Contact Us</a></li>
-					<li><a href="promote-music">Promote Music</a></li>
+					<li><a href="{{ url_for('index') }}" style="color: #b1060f;">Home</a></li>                                                                                                                                  <li><a href="{{ url_for('about_us') }}">About Us</a></li>                                           <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li
+>
+
 					<li><div class="searchBody">
-			<form class="search" method="GET" action="https://www.maxbeatx.com/search.html">
+			<form class="search" method="GET" action="{{ url_for('search') }}">
 				<input type="search" placeholder="Search..." name="q">
 				<button type="submit"><i class="fa fa-search"></i></button>
 			</form>
@@ -101,7 +98,6 @@
 
 
 		</head>
-
 
 		
 
@@ -138,7 +134,7 @@
 			    </div>
 
 			    <div class="top-img">
-			    <img src="img/MaxBeatx4.jpg" alt="MaxBeatx">
+			    <img src="{{ url_for('static', filename='img/maxbeatx44.jpg') }}" alt="MaxNews">
 		        </div>
 
 			<p>MaxBeatx.com is an online music website that provides sufficient Music Mp3 and Mp4, News update. MaxBeatx is avaliable to give you quality service, by providing a lot of music from your favorite artists for streaming and downloading.</p>
@@ -160,277 +156,113 @@
 			<!--- ABOUT US END --->
 
 
-			<!--- NIGERIA MUSIC --->
+
+
+			<!--- NEWS --->
 
         <!--- POST --->
-			<div class="headline">
 
-				<div class="post-head">
-				<div class="naija"></div>
-				<h4>NIGERIA MUSIC...</h4>
-			    </div>
 
-			    <!--- MAIN POST --->
-				<div class="post">
-					<a href="https://www.maxbeatx.com/nigeria-music/young-jonn-xtra-cool">
-					<div class="music">
 
-						<img src="img/Young-Jonn-Xtra-Cool.jpg" alt="Young Jonn - Xtra-Cool">
+                        <div class="headline">
 
-						<div class="text">
-							<span>Nigeria Music</span>
+                                <div class="post-head">
+                                <div class="naija"></div>
+                                <h4> LATEST NEWS UPDATE</h4>
+                            </div>
 
-							<div class="p">
-							<p>Young Jonn - Xtra-Cool</p>
-							
-						   </div>
 
-						</div>
 
-					</div>
-				    </a>
-				</div>
+                            <!--- MAIN POST --->
 
+                            {% if news_list %}
+                    {% for article in news_list %}
 
-               
-				<div class="post">
-					<a href="https://www.maxbeatx.com/nigeria-music/ayra-starr-rush">
-					<div class="music">
+                                <div class="post">
 
-						<img src="img/Ayra-Starr-Rush.jpg" alt="Ayra Starr - Rush">
+                                        <a href="{{ url_for('news_details', news_id=loop.index0, category=category) }}">
 
-						<div class="text">
-							<span>Nigeria Music</span>
+                                        <div class="music">
 
-							<div class="p">
-							<p>Ayra Starr - Rush</p>
-						   </div>
-						   
-						</div>
 
-					</div>
-				    </a>
-				</div>
+{% if article.image %}
+                                <img src="{{ article.image }}" alt="{{ article.title }}">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='img/MAX-NEWS.png') }}" alt="MaxNews">
+                            {% endif %}
 
+                                                <div class="text">
 
 
-				<div class="post">
-					<div class="music">
+                                                 <div class="p">
+                                                 <p>{{ article.title }}</p>
 
-						<img src="img/MaxBeatx-actwork.jpg" alt="MaxBeatx">					    
+      </div>
 
-						<div class="text">
-							<span>Nigeria Music</span>
+      <span>{{ article.description }}</span>
 
-							<div class="p">
-							<p>Omah Lay - Take It On</p>
-							<p>(Official Sprite Limelight)</p>
-							<p>Music...</p>
-						   </div>
-						   
-						</div>
+                                                </div>
 
-					</div>
-				</div>
+                                        </div>
+                                        </a>
+                                </div>
 
 
+               {% endfor %}
 
-				<div class="post">
-					<a href="https://www.maxbeatx.com/nigeria-music/pheelz-electricity-ft-davido">
-					<div class="music">
+                {% else %}
 
-						<img src="img/pheelz-electricity-ft-davido.jpg" alt="Pheelz - Electricity ft. Davido">					    
 
-						<div class="text">
-							<span>Nigeria Music</span>
 
-							<div class="p">
-							
-							<p>Pheelz - Electricity ft</p>
-							<p>Davido</p>
-						    
-						   </div>
-						   
-						</div>
+                    <!-- MANI POST ELSE -->
 
-					</div>
-					</a>
-				</div>
+                    <div class="post">
+                                        <a href="#">                                                                                        <div class
+="music">
 
+                                <img src="{{ url_for('static', filename='img/maxbeatx44.png') }}" alt="MaxNews">
 
 
-				<div class="post">
-					<div class="music">
+                                                <d
+iv class="text">
 
-						<img src="img/MaxBeatx-actwork.jpg" alt="MaxBeatx">					    
 
-						<div class="text">
-							<span>Nigeria Music</span>
+        <span>News Update</span>
 
-							<div class="p">
-							<p>Omah Lay - Bend You</p>
-						   </div>
-						   
-						</div>
+      <div class="p">
+                                                        <p>No news update for this category!!!</p>
 
-					</div>
-				</div>
+      </div>                                                                                        
+                                                                                                  </div>                                                                                                                                        </div>                                            </a>                                      </div>
 
-				<!--- MAIN POST END --->
 
+                                                 <!-- MAIN POST ELSE END -->
 
-				<div class="more-button">
-					
-					<button onclick="location.href='https://www.maxbeatx.com/nigeria-music/page-1'">VIEW MORE</button>
-				    
-				</div>
+                {% endif %}
 
 
 
-			</div>
 
-			<!--- POST-END --->
 
-			<!--- NIGERIA MUSIC END --->
 
-			
+                                <!--- MAIN POST END --->
 
 
+                                <div class="more-button">
 
-		<!--- FOREIGN MUSIC --->
+                                        <button onclick="location.href='#'">NEXT PAGE</button>
 
-        <!--- POST --->
-			<div class="headline">
+                                </div>
 
-				<div class="post-head">
-				<div class="naija"></div>
-				<h4>FOREIGN MUSIC...</h4>
-			    </div>
 
-			    <!--- MAIN POST --->
-				<div class="post">
-					<a href="https://www.maxbeatx.com/foreign-music/arrdee-hello-mate-ft-kyla">
-					<div class="music">
 
-						<img src="img/ArrDee-Hello-Mate-ft-Kyla-1.jpg" alt="Arrdee - Hello Mate ft. Kyla">
+                        </div>
 
-						<div class="text">
-							<span>Foreign Music</span>
+                        
 
-							<div class="p">
-							
-							<p>Arrdee - Hello Mate ft.</p>
-							<p>Kyla</p>
-						    
-						   </div>
+                        <!--- POST-END --->	
 
-						</div>
-
-					</div>
-					</a>
-				</div>
-
-
-
-				
-				<div class="post">
-					<a href="https://www.maxbeatx.com/foreign-music/beyonce-halo">
-					<div class="music">
-
-						<img src="img/Beyonce-Halo.png" alt="Beyonce - Halo">
-
-						<div class="text">
-							<span>Foreign Music</span>
-
-							<div class="p">
-							<p>Beyonce - Halo</p>
-						   </div>
-						   
-						</div>
-
-					</div>
-				    </a>
-				</div>
-
-
-
-				<div class="post">
-					<a href="https://www.maxbeatx.com/foreign-music/lewis-capaldi-someone-you-loved">
-					<div class="music">
-
-						<img src="img/lewis-capaldi-someone-you-loved.jpg" alt="Lewis Capaldi - Someone You Loved">					    
-
-						<div class="text">
-							<span>Foreign Music</span>
-
-							<div class="p">
-							<p>Lewis Capaldi - Someone You Loved</p>
-							
-						   </div>
-						   
-						</div>
-
-					</div>
-				    </a>
-				</div>
-
-
-
-				<div class="post">
-					<a href="https://www.maxbeatx.com/foreign-music/john-legend-all-of-me">
-					<div class="music">
-
-						<img src="img/John-Legend_All-Of-Me.png" alt="John Legend - All Of Me">					    
-
-						<div class="text">
-							<span>Foreign Music</span>
-
-							<div class="p">
-							<p>John Legend - All Of Me</p>
-						   </div>
-						   
-						</div>
-
-					</div>
-					</a>
-				</div>
-
-
-
-				<div class="post">
-					<div class="music">
-
-						<img src="img/MaxBeatx-actwork.jpg" alt="MaxBeatx">					    
-
-						<div class="text">
-							<span>Foreign Music</span>
-
-							<div class="p">
-							<p>Maroons 5 - Girls Like You ft.</p>
-							<p>Cardi B</p>
-						   </div>
-						   
-						</div>
-
-					</div>
-				</div>
-
-				<!--- MAIN POST END --->
-
-
-				<div class="more-button">
-					
-					<button onclick="location.href='https://www.maxbeatx.com/foreign-music/page-1'">VIEW MORE</button>
-				    
-				</div>
-
-
-
-			</div>
-
-			<!--- POST-END --->
-
-			<!--- FOREIGN MUSIC END --->
+			<!--- NEWS END --->
 
 
 
@@ -443,12 +275,13 @@
 		<div class="main-footer">
 
 			<div class="img-footer-logo">
-				<a href="https://www.maxbeatx.com">
-			
-					<p id="logo2"></p>
+				<a href="{{ url_for('index') }}">
+
+
+				<div id="logo2"></div>
 			   <img src="{{ url_for('static', filename='img/maxnews.png') }}" alt="MaxNews">
 
-				</a>
+			   </a>
 			</div>
 
 			<div class="footer-link">
@@ -459,12 +292,11 @@
 					<hr>
 
 					<ul class="foot-link"> 
-						<li><a href="https://www.maxbeatx.com">Home</a></li>
-					    <li><a href="https://www.maxbeatx.com">Musics</a></li>
-					    <li><a href="news">News</a></li>
-					    <li><a href="about-us">About Us</a></li>
-					    <li><a href="contact-us">Contact Us</a></li>
-					    <li><a href="promote-music">Promote Music</a></li>
+						<li><a href="{{ url_for('index') }}">Home</a></li>
+					
+					    <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+					    <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+					
 					</ul>
 
 				</div>
@@ -476,7 +308,7 @@
 
 					<ul class="foot-link"> 
 						<p>
-							MaxBeatx is the best website with the best hit music from Nigeria and around the world.
+							MaxNews is the best website with the best news around the world.
 						</p>
 					</ul>
 
@@ -488,9 +320,9 @@
 					<hr>
 
 					<ul class="foot-link"> 
-						<li><a href="https://www.maxbeatx.com"><i class="fa fa-home"></i> https://www.maxbeatx.com</a></li>
+						<li><a href="{{ url_for('index') }}"><i class="fa fa-home"></i> MaxNews</a></li>
 					<li><a href="tel:+234(0)8149028042"><i class="fa fa-phone"></i> +234 (0) 8149028042</a></li>
-					<li><i class="fa fa-location"></i> MaxBeatx, Oyo State. Nigeria</li>
+					<li><i class="fa fa-location"></i> MaxNews, Oyo State. Nigeria</li>
 					</ul>
 
 				</div>
@@ -500,7 +332,7 @@
 
 			<div class="footer-bottom">
 				<hr>
-				<p>&copy; <span id="year"></span> MaxBeatx. All right reserved.</p>
+				<p>&copy; <span id="year"></span> MaxNews. All right reserved.</p>
 			</div>
 				
 			</div>
@@ -508,7 +340,9 @@
 		</div>
 	</footer>
 
-	<script src="script/main.js"></script>
-	<script src="script/date.js"></script>
+	<script src="{{ url_for('static', filename='script/main.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/date.js') }}"></script>
+	
+	
 </body>
 </html>
