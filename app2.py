@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 # Replace with your NewsAPI key
-API_KEY = '58acd9817a3b461db9415609e6a2cd37'
+API_KEY = 'NewsAPI_Key'
 BASE_URL = 'https://newsapi.org/v2/top-headlines'
 
 # Categories to fetch
