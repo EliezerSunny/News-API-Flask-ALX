@@ -16,7 +16,7 @@ def fetch_news(category):
     params = {
         'apiKey': API_KEY,
         'language': 'en',  # English news only
-        'pageSize': 5      # Limit to 5 articles
+        'pageSize': 8      # Limit to 8 articles
     }
 
     if category != 'today':  # Fetch global news for "Today"
